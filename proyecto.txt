@@ -1,0 +1,59 @@
+
+Descripción directivas Angular:
+
++ Componente
+++ Angular 
+@Component
+@Module
+++Personalizadas (Custom)
+
++Estructural
+ngIf
+ngFor
+ngSwitch
+ngPlural
+ngTemplate
+ngComponentOutlet
+
++Atributo
+ngClass
+ngStyle
+ngModel
+
+
+
+1º Para crear la aplicación:
+
+renegade@MiPC:~/proyectos/Angular2022$ ng new directivas
+
+
+
+2º Vamos a utilizar inputs de formulario, así que añadimos el módulo
+
+Hay que importar el módulo para utilizar ngModel, en los inputs del formulario
+
+Para ello vamos al fichero: src/app/app.module.ts y añadimos: FormsModule
+
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  imports: [
+    BrowserModule, FormsModule
+  ],
+
+
+... ... ...
+
+
+
+
+  constructor(){
+    this.entradas = [
+      {titulo:"Python cada día más presente"},
+      {titulo:"Java presente desde hace más de 20 años"},
+      {titulo:"JavaScript cada vez más funcional"},
+      {titulo:"Kotlin pontencia para tus apps"},
+      {titulo:"¿Dónde quedó Pascal?"},
+    ]
+
+  }
